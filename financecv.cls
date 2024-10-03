@@ -43,6 +43,7 @@
     \DeclareOption{english}
     {
         \newcommand{\textEducation}{Education}
+            \newcommand{\textTeaching}{Teaching}
         \newcommand{\textExperience}{Professional Experience}
         \newcommand{\textLeadership}{Leadership}
         \newcommand{\textProjects}{Projects}
@@ -55,51 +56,8 @@
         \newcommand{\textCourses}{Courses}
     }
 
-    \DeclareOption{russian}
-    {
-        \newcommand{\textEducation}{Образование}
-        \newcommand{\textExperience}{Профессиональный опыт}
-        \newcommand{\textLeadership}{Лидерский опыт}
-        \newcommand{\textProjects}{Личные проекты}
-        \newcommand{\textSkills}{Навыки}
-        \newcommand{\textAwards}{Награды и почести}
-        \newcommand{\textPublications}{Научные публикации}
-
-        \newcommand{\textThesis}{Дипломная работа}
-        \newcommand{\textSupervisor}{Дипломный руководитель}
-        \newcommand{\textCourses}{Курсы}
-    }
-
-    \DeclareOption{german}
-    {
-        \newcommand{\textEducation}{Ausbildung}
-        \newcommand{\textExperience}{Erfahrung}
-        \newcommand{\textLeadership}{Führung}
-        \newcommand{\textProjects}{Projekte}
-        \newcommand{\textSkills}{Fähigkeiten}
-        \newcommand{\textAwards}{Auszeichnungen und Ehrungen}
-        \newcommand{\textPublications}{Wissenschaftliche Veröffentlichungen}
-
-        \newcommand{\textThesis}{Thesis}
-        \newcommand{\textSupervisor}{Supervisor}
-        \newcommand{\textCourses}{Courses}
-    }
-
-    \DeclareOption{french}
-    {
-        \newcommand{\textEducation}{Education}
-        \newcommand{\textExperience}{Experience}
-        \newcommand{\textLeadership}{Leadership}
-        \newcommand{\textProjects}{Projects}
-        \newcommand{\textSkills}{Skills}
-        \newcommand{\textAwards}{Awards \& Honors}
-        \newcommand{\textPublications}{Publications}
-
-        \newcommand{\textThesis}{Thesis}
-        \newcommand{\textSupervisor}{Supervisor}
-        \newcommand{\textCourses}{Courses}
-    }
-
+%
+%
 % Default Options
     \DeclareOption{defaultoptions}
     {
@@ -176,8 +134,8 @@
                     \faIcon{envelope}~\href{mailto:\@email}{\@email}
                     \ifdefined\@phone\separator\faIcon{mobile}~\@phone\fi
                     \ifdefined\@homepage\separator\href{\@homepage}{\faIcon{globe}~\@homepage}\fi
-                    \ifdefined\@linkedin\separator\href{http://www.linkedin.com/in/\@linkedin}{\faIcon{linkedin}~\@linkedin}\fi
-                    \ifdefined\@github\separator\href{http://www.github.com/\@github}{\faIcon{github-square}~\@github}\fi 
+                    \ifdefined\@linkedin\separator\href{https://www.linkedin.com/in/mael-macuglia-9472301b0/}{\faIcon{linkedin}~\@linkedin}\fi
+                    \ifdefined\@github\separator\href{https://github.com/MacMael}{\faIcon{github-square}~\@github}\fi 
                     \ifdefined\@gitlab\separator\href{http://www.gitlab.com/\@gitlab}{\faIcon{gitlab}~\@gitlab}\fi
                     \ifdefined\@dockerhub\separator\href{https://hub.docker.com/u/\@dockerhub}{\faIcon{docker}~\@dockerhub}\fi
                     \ifdefined\@researchgate\separator\href{https://www.researchgate.net/profile/\@researchgate}{\faIcon{researchgate}~\@researchgate}\fi
@@ -196,6 +154,7 @@
     \newcommand{\cvsection}[1]{\vspace*{-0.2cm}\section*{\cvsectionsize{#1}}\sectionline}
 
     \newcommand{\education}{\cvsection{\textEducation}}
+    \newcommand{\teaching}{\cvsection{\textTeaching}}
     \newcommand{\experience}{\cvsection{\textExperience}}
     \newcommand{\leadership}{\cvsection{\textLeadership}}
     \newcommand{\projects}{\cvsection{\textProjects}}
@@ -213,7 +172,7 @@
     {
         \noindent\begin{minipage}[t]{\textwidth}
             \par\vspace*{0.05cm}
-            \textbf{#3\ifstrempty{#4}{}{, #4}}\hfill\textbf{#2}\par
+            \textbf{#3\ifstrempty{#4}{}{, #4}}\hfill#2\par
             \noindent\emph{#5\ifstrempty{#6}{}{, #6}}\ifstrempty{#7}{}{, #7}\hfill{#1}\ifstrempty{#8}{}{\par #8} 
             \par\vspace*{0.05cm}
         \end{minipage}
