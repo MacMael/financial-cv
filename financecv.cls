@@ -133,7 +133,7 @@
                     \vspace*{0.05cm}   
                     \faIcon{envelope}~\href{mailto:\@email}{\@email}
                     \ifdefined\@phone\separator\faIcon{mobile}~\@phone\fi
-                    \ifdefined\@homepage\separator\href{\@homepage}{\faIcon{globe}~\@homepage}\fi
+                    \ifdefined\@homepage\separator\href{https://mael-macuglia.github.io}{\faIcon{globe}~\@homepage}\fi
                     \ifdefined\@linkedin\separator\href{https://www.linkedin.com/in/mael-macuglia-9472301b0/}{\faIcon{linkedin}~\@linkedin}\fi
                     \ifdefined\@github\separator\href{https://github.com/MacMael}{\faIcon{github-square}~\@github}\fi 
                     \ifdefined\@gitlab\separator\href{http://www.gitlab.com/\@gitlab}{\faIcon{gitlab}~\@gitlab}\fi
